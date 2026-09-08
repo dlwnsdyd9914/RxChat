@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+
+# Xcode user-specific files
+xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+
+# Build outputs
+build/
+DerivedData/
+*.ipa
+*.dSYM
+*.dSYM.zip
+
+# Swift Package Manager cache
+.build/
+.swiftpm/
+
+# Firebase project configuration
+GoogleService-Info.plist
+
+# Local secrets
+Secrets.xcconfig
+.env
+.env.*
