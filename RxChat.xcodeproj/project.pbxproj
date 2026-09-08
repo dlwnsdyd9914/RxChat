@@ -33,7 +33,7 @@
 		D3291E1B304FF17000CCF3FC /* Exceptions for "RxChat" folder in "RxChat" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				App/Resource/Info.plist,
 			);
 			target = D3291DF2304FF16D00CCF3FC /* RxChat */;
 		};
@@ -291,7 +291,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XC9AZ42Q8N;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RxChat/Info.plist;
+				INFOPLIST_FILE = RxChat/App/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -319,7 +319,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XC9AZ42Q8N;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RxChat/Info.plist;
+				INFOPLIST_FILE = RxChat/App/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
