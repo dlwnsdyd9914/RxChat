@@ -6,10 +6,14 @@
 //
 
 import UIKit
+import SnapKit
+import Then
+import SwiftUI
 
 final class LoginViewController: UIViewController {
 
     // MARK: - Properties
+    private let gradientLayer = CAGradientLayer()
 
     // MARK: - ViewModel
 
@@ -20,13 +24,28 @@ final class LoginViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        gradientLayer.frame = view.bounds
     }
 
     // MARK: - UI Configurations
+    private func setupUI() {
+        applyGradient(gradientLayer)
+    }
 
     // MARK: - Bindings
 
     // MARK: - Private Methods
 
-
 }
+
+#Preview {
+    VCPreview {
+        UINavigationController(rootViewController: LoginViewController())
+    }.edgesIgnoringSafeArea(.all)
+}
+
