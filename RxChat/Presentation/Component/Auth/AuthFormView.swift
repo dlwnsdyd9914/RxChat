@@ -17,6 +17,7 @@ final class AuthFormView: UIView {
     // MARK: - UI Components
     private let iconImageView = UIImageView().then {
         $0.contentMode = .scaleAspectFit
+        $0.isAccessibilityElement = false
     }
 
     // MARK: - Initializer
@@ -55,7 +56,7 @@ final class AuthFormView: UIView {
     private func layoutAuthTextField() {
         textField.snp.makeConstraints {
             $0.leading.equalTo(iconImageView.snp.trailing).offset(8)
-            $0.trailing.equalToSuperview()
+            $0.trailing.equalToSuperview().inset(8)
             $0.centerY.equalToSuperview()
         }
     }

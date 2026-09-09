@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		D3291E3A304FF6A200CCF3FC /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = D3291E39304FF6A200CCF3FC /* Then */; };
 		D3291E3D304FF6AA00CCF3FC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D3291E3C304FF6AA00CCF3FC /* SnapKit */; };
-		D3291E40304FF6BF00CCF3FC /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = D3291E3F304FF6BF00CCF3FC /* RxBlocking */; };
 		D3291E42304FF6BF00CCF3FC /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D3291E41304FF6BF00CCF3FC /* RxCocoa */; };
 		D3291E44304FF6BF00CCF3FC /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D3291E43304FF6BF00CCF3FC /* RxSwift */; };
 		D3291E46304FF6BF00CCF3FC /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = D3291E45304FF6BF00CCF3FC /* RxTest */; };
+		D3291E9D3050063E00CCF3FC /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = D3291E9C3050063E00CCF3FC /* RxBlocking */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +75,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3291E3A304FF6A200CCF3FC /* Then in Frameworks */,
-				D3291E40304FF6BF00CCF3FC /* RxBlocking in Frameworks */,
 				D3291E44304FF6BF00CCF3FC /* RxSwift in Frameworks */,
 				D3291E42304FF6BF00CCF3FC /* RxCocoa in Frameworks */,
 				D3291E3D304FF6AA00CCF3FC /* SnapKit in Frameworks */,
@@ -87,6 +86,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3291E46304FF6BF00CCF3FC /* RxTest in Frameworks */,
+				D3291E9D3050063E00CCF3FC /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +106,7 @@
 				D3291DF5304FF16D00CCF3FC /* RxChat */,
 				D3291E0C304FF17000CCF3FC /* RxChatTests */,
 				D3291E16304FF17000CCF3FC /* RxChatUITests */,
+				D3291E9B3050063E00CCF3FC /* Frameworks */,
 				D3291DF4304FF16D00CCF3FC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -118,6 +119,13 @@
 				D3291E13304FF17000CCF3FC /* RxChatUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D3291E9B3050063E00CCF3FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,7 +150,6 @@
 			packageProductDependencies = (
 				D3291E39304FF6A200CCF3FC /* Then */,
 				D3291E3C304FF6AA00CCF3FC /* SnapKit */,
-				D3291E3F304FF6BF00CCF3FC /* RxBlocking */,
 				D3291E41304FF6BF00CCF3FC /* RxCocoa */,
 				D3291E43304FF6BF00CCF3FC /* RxSwift */,
 			);
@@ -169,6 +176,7 @@
 			name = RxChatTests;
 			packageProductDependencies = (
 				D3291E45304FF6BF00CCF3FC /* RxTest */,
+				D3291E9C3050063E00CCF3FC /* RxBlocking */,
 			);
 			productName = RxChatTests;
 			productReference = D3291E09304FF17000CCF3FC /* RxChatTests.xctest */;
@@ -322,6 +330,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -329,9 +338,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Dante.RxChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -349,6 +362,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -356,9 +370,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Dante.RxChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -632,11 +650,6 @@
 			package = D3291E3B304FF6AA00CCF3FC /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
-		D3291E3F304FF6BF00CCF3FC /* RxBlocking */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D3291E3E304FF6BF00CCF3FC /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxBlocking;
-		};
 		D3291E41304FF6BF00CCF3FC /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D3291E3E304FF6BF00CCF3FC /* XCRemoteSwiftPackageReference "RxSwift" */;
@@ -651,6 +664,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D3291E3E304FF6BF00CCF3FC /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxTest;
+		};
+		D3291E9C3050063E00CCF3FC /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3291E3E304FF6BF00CCF3FC /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

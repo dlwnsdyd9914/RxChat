@@ -28,9 +28,11 @@ final class AuthTextField: UITextField {
         font = .boldSystemFont(ofSize: 16)
         textColor = .AppColor.TextField.text
         attributedPlaceholder = AttributedTextStyle.placeholder(text: kind.placeholder, font: .boldSystemFont(ofSize: 16), color: .AppColor.TextField.text)
+        accessibilityLabel = kind.placeholder
         keyboardType = kind.keyboardType
         isSecureTextEntry = kind.isSecureTextEntry
         autocapitalizationType = kind.autocapitalizationType
+
 
     }
 }
