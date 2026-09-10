@@ -15,13 +15,14 @@ import SwiftUI
 final class LoginViewController: UIViewController {
 
     // MARK: - Properties
-    private let gradientLayer = CAGradientLayer()
     private let disposeBag = DisposeBag()
 
     // MARK: - ViewModel
     private let viewModel: LoginViewModel
 
     // MARK: - UI Components
+    private let gradientBackgroundView = GradientBackgroundView()
+
     private let logoImageView = UIImageView(image: .Auth.logo).then {
         $0.contentMode = .scaleAspectFit
     }
@@ -61,15 +62,9 @@ final class LoginViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
         addSubViews()
         configureConstraints()
         bind()
-    }
-
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        gradientLayer.frame = view.bounds
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -78,19 +73,23 @@ final class LoginViewController: UIViewController {
     }
 
     // MARK: - UI Configurations
-    private func setupUI() {
-        applyGradient(gradientLayer)
-    }
 
     private func addSubViews() {
-        [logoImageView, loginFormStackView, loginButton, signButton].forEach { view.addSubview($0) }
+        [gradientBackgroundView, logoImageView, loginFormStackView, loginButton, signButton].forEach { view.addSubview($0) }
     }
 
     private func configureConstraints() {
+        layoutGradientBackgroundView()
         layoutLogoImageView()
         layoutLoginFormStackView()
         layoutLoginButton()
         layoutSignButton()
+    }
+
+    private func layoutGradientBackgroundView() {
+        gradientBackgroundView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
     }
 
     private func layoutLogoImageView() {
